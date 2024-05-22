@@ -7,7 +7,7 @@ Under development | Työn alla !!
 https://www.fingrid.fi/en/
 
 This application is for retrieving data through Fingrid's open REST API interface.
-API instructions: https://beta-data.fingrid.fi/en/instructions
+API instructions: https://data.fingrid.fi/en/instructions
 
 Plan:
 
