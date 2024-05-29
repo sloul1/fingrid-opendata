@@ -9,6 +9,9 @@ https://www.fingrid.fi/en/
 This application is for retrieving data through Fingrid's open REST API interface.
 API instructions: https://data.fingrid.fi/en/instructions
 
+Fingrid's open data licence and terms of use can be checked at their website's about section.
+https://data.fingrid.fi/en/about
+
 Plan:
 
 - retrieve hourly prices for electricity once in 24 h and store data
