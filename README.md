@@ -13,10 +13,6 @@ API instructions: https://data.fingrid.fi/en/instructions
 
 API key is stored in .env file as: API_KEY=insert_your_api_key_here
 
-Running program in Linux cli:
-
-diipa@daapa:~/fingrid-opendata$ python3 app.py 
-
 Program asks user input and retrieves data accordingly from Fingrid open data and prints response as JSON, csv or xml.
 
 Input parameters:
@@ -30,6 +26,10 @@ pageSize (int32)
 locale (en, fi)  
 sortBy (startTime, endTime)  
 sortOrder (asc, desc)
+
+Running program in Linux cli: diipa@daapa:~/fingrid-opendata$ python3 app.py
+
+![run app](run-app.png?raw=true "Running app (python3 app.py)")
 
 More information in following link: https://developer-data.fingrid.fi/api-details#api=avoindata-api&operation=GetDatasetData
 
