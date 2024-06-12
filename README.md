@@ -21,8 +21,8 @@ Program asks user input and retrieves data accordingly from Fingrid open data an
 
 Input parameters:
 
-datasetID (int32) Checak available datasets at: https://data.fingrid.fi/en/datasets
-startTime (YYYY-MM-DDTHH:MM:SSZ)
+datasetID (int32) Check available datasets at: https://data.fingrid.fi/en/datasets  
+startTime (YYYY-MM-DDTHH:MM:SSZ)  
 endTime (YYYY-MM-DDTHH:MM:SSZ)
 format (json, csv or xml)
 oneRowPerTimePeriod (boolean) - xml not supported currently
