@@ -5,7 +5,7 @@ import urllib.request, json, os
 from dotenv import load_dotenv
 load_dotenv()
 
-# Get API key from .env file
+# Read API key from .env file
 api_key = os.getenv('API_KEY')
 if api_key is None:
     raise Exception("Failed to load API key from .env file")

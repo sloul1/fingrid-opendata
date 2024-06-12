@@ -9,14 +9,18 @@ https://data.fingrid.fi/en/about
 
 https://www.fingrid.fi/en/
 
-This program is for retrieving data through Fingrid's open REST API interface. Get your own API key from instructions below.
+This program is for retrieving data through Fingrid's open REST API interface.
+You will need to get your own API key using instructions below.
 
 API instructions: https://data.fingrid.fi/en/instructions
 
 API key is stored in .env file as: API_KEY=insert_your_api_key_here
 
-At this stage this python program retrieves wind power production real time data from Fingrid open data and prints it.
-https://data.fingrid.fi/en/datasets/181  
+At this stage this python program retrieves wind power production real time data from Fingrid open data and output response as JSON.
+
+https://data.fingrid.fi/en/datasets/181
+
+Using unauthorized API key will produce error: "HTTP Error 401: Access Denied"
 
   
 
