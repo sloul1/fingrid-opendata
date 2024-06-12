@@ -23,12 +23,12 @@ Input parameters:
 
 datasetID (int32) Check available datasets at: https://data.fingrid.fi/en/datasets  
 startTime (YYYY-MM-DDTHH:MM:SSZ)  
-endTime (YYYY-MM-DDTHH:MM:SSZ)
-format (json, csv or xml)
-oneRowPerTimePeriod (boolean) - xml not supported currently
-pageSize (int32)
-locale (en, fi)
-sortBy (startTime, endTime)
+endTime (YYYY-MM-DDTHH:MM:SSZ)  
+format (json, csv or xml)  
+oneRowPerTimePeriod (boolean) - xml not supported currently  
+pageSize (int32)  
+locale (en, fi)  
+sortBy (startTime, endTime)  
 sortOrder (asc, desc)
 
 More information in following link: https://developer-data.fingrid.fi/api-details#api=avoindata-api&operation=GetDatasetData
