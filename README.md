@@ -13,7 +13,10 @@ API instructions: https://data.fingrid.fi/en/instructions
 
 API key is stored in .env file as: API_KEY=insert_your_api_key_here
 
-Program asks user input and retrieves data accordingly from Fingrid open data and prints response as JSON, csv or xml.
+Program reads user's API key. Using unauthorized API key will produce error: "HTTP Error 401: Access Denied".
+Then program checks if Fingrid API is active. If not program exits.
+If API is active program asks user input for parameters and retrieves data accordingly 
+from Fingrid open data and prints response as JSON, csv or xml.
 
 Input parameters:
 
@@ -31,10 +34,8 @@ Running program in Linux cli: diipa@daapa:~/fingrid-opendata$ python3 app.py
 
 ![run app](run-app.png?raw=true "Running app (python3 app.py)")
 
-More information in following link: https://developer-data.fingrid.fi/api-details#api=avoindata-api&operation=GetDatasetData
+More information on API details: https://developer-data.fingrid.fi/api-details#api=avoindata-api&operation=GetDatasetData
 
-
-Using unauthorized API key will produce error: "HTTP Error 401: Access Denied"
 
 Possible future:
 

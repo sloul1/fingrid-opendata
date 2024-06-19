@@ -11,7 +11,9 @@ api_key = os.getenv('API_KEY')
 if api_key is None:
     raise Exception("Failed to load API key from .env file")
 
-# Test if Fingrid API is active before making queries.
+## Create test for API key validation?
+
+# Test if Fingrid API is active before making further data queries.
 try:
     url = "https://data.fingrid.fi/api/notifications/active"
 
@@ -31,8 +33,7 @@ try:
         raise Exception(f"Unexpected status code: {response.getcode()}")
 except Exception as e:
     print(f"Error when checking API availability: {e}")
-    exit()
-# Exit if the API is not available
+    exit() # Exit if the API is not available
 
 # Get user input for parameters
 print("Available dataset IDs are listed in https://data.fingrid.fi/en/datasets")
