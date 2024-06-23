@@ -62,8 +62,16 @@ try:
 
     req.get_method = lambda: 'GET'
     response = urllib.request.urlopen(req)
+    
+    # Save the JSON file from API query
+    
+    with open('output.json', 'w') as f:
+        f.write(response.read().decode('utf-8'))
+
     print(response.getcode())
-    print(response.read())
+    if response.getcode() == 200:
+        print('''API request successful. Wrote to file "output.json"''')
+    # print(response.read())
 except Exception as e:
     print(e)
 ####################################
