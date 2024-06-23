@@ -40,7 +40,7 @@ print("Available dataset IDs are listed in https://data.fingrid.fi/en/datasets")
 dataset_id = input("Enter dataset ID: ")
 start_time = input("Enter start time (format: YYYY-MM-DDTHH:MM:SSZ): ")
 end_time = input("Enter end time (format: YYYY-MM-DDTHH:MM:SSZ): ")
-format_ = input("Enter desired output format (json, csv or xml): ")
+format_ = input("Enter desired output format (json = default, csv or xml): ")
 one_row_per_time_period = input("Do you want one row per time period? (yes/no): ")
 page_size = int(input("How many results per page?: "))
 locale = input("Enter locale (en/fi): ")
@@ -63,14 +63,28 @@ try:
     req.get_method = lambda: 'GET'
     response = urllib.request.urlopen(req)
     
+    # Define filetype according fo format
+
+    output_format = format_.lower()
+    if output_format == 'csv':
+        file_name = 'output.csv'
+        file_extension = '.csv'
+    # xml can't use one_row_per_time_period option???     
+    elif output_format == 'xml':
+        file_name = 'output.xml'
+        file_extension = '.xml'
+    else:
+        file_name = 'output.json'
+        file_extension = '.json'
+    
     # Save the JSON file from API query
     
-    with open('output.json', 'w') as f:
+    with open(file_name, 'w') as f:
         f.write(response.read().decode('utf-8'))
 
     print(response.getcode())
     if response.getcode() == 200:
-        print('''API request successful. Wrote to file "output.json"''')
+        print(f'''API request successful. Wrote to file "{file_name}"''')
     # print(response.read())
 except Exception as e:
     print(e)

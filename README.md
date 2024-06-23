@@ -36,6 +36,7 @@ Running program in Linux cli: diipa@daapa:~/fingrid-opendata$ python3 app.py
 
 More information on API details: https://developer-data.fingrid.fi/api-details#api=avoindata-api&operation=GetDatasetData
 
+Instead of printing response of API query program saves it now to a file.
 
 Possible future:
 
